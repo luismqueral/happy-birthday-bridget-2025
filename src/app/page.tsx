@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useRef, useMemo, useEffect } from "react";
+import { useState, useRef, useMemo } from "react";
 
 // DancingGifGroup component to display a static group of dancing GIFs
 const DancingGifGroup = ({ isVisible }: { isVisible: boolean }) => {
@@ -36,7 +36,7 @@ const DancingGifGroup = ({ isVisible }: { isVisible: boolean }) => {
   const randomGifs = useMemo(() => {
     const shuffled = [...dancingGifs].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
-  }, [count]);
+  }, [count, dancingGifs]);
 
   if (!isVisible) return null;
   
@@ -105,13 +105,6 @@ export default function Home() {
     "border-[#ff99cc]", // light pink
   ];
 
-  // Additional GIFs array
-  const additionalGifs = [
-    "/gifs/horses.gif",
-    "/gifs/dinosaur.gif",
-    "/gifs/celebrationoflife.gif",
-  ];
-
   // Image data with widths and heights to calculate aspect ratios
   const images = [
     { src: "/images/IMG_1262.jpg", width: 2048, height: 1536, orientation: "landscape" },
@@ -141,7 +134,7 @@ export default function Home() {
       {/* Construction Banner */}
       <div className={`${isPlaying ? 'bg-yellow-300' : 'bg-white'} text-center py-1 border-y-2 border-black marquee`}>
         <span style={{ fontFamily: isPlaying ? "Comic Sans MS, cursive" : "Arial, sans-serif" }}>
-          ★★★ HAPPYBIRTHDAYBRIDGET.BIZ -- THE OFFICIAL WEBSITE FOR BRIDGET'S BIRTHDAY ★★★
+          ★★★ HAPPYBIRTHDAYBRIDGET.BIZ -- THE OFFICIAL WEBSITE FOR BRIDGET&apos;S BIRTHDAY ★★★
         </span>
       </div>
       
@@ -186,7 +179,7 @@ export default function Home() {
             {/* Audio Player */}
             <div className="bg-white/80 rounded-lg p-4 w-full max-w-md mt-4">
               <p className="text-xl font-bold mb-2" style={{ fontFamily: "Comic Sans MS, cursive" }}>
-                press play to initiate bridget's birthday
+                press play to initiate bridget&apos;s birthday
               </p>
               <audio 
                 ref={audioRef}
