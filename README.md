@@ -1,6 +1,27 @@
-# Happy Birthday Bridget 2025 - Geocities Style
+# Happy Birthday Bridget 2025
 
-A nostalgic, Geocities-inspired birthday website created with love for Bridget's birthday in 2025.
+A nostalgic Geocities-style birthday website for Bridget featuring:
+
+- Interactive "party mode" activated by playing music
+- Photo gallery with colorful borders
+- Dancing GIFs throughout the site
+- Classic early 2000s web aesthetic
+
+Built with Next.js and React.
+
+## Running locally
+
+```bash
+npm install
+npm run dev
+```
+
+## Features
+
+- Press play to initiate Bridget's birthday celebration
+- Randomized colors and animations in party mode
+- Minimalist design in regular mode
+- Curated photo collection
 
 ## Overview
 
