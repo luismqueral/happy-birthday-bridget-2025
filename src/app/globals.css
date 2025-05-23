@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Comic Sans MS Font */
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('https://db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.woff2') format('woff2'),
+       url('https://db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.woff') format('woff'),
+       url('https://db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('https://db.onlinewebfonts.com/t/164508e86f7318a6462a97034e0b321b.woff2') format('woff2'),
+       url('https://db.onlinewebfonts.com/t/164508e86f7318a6462a97034e0b321b.woff') format('woff'),
+       url('https://db.onlinewebfonts.com/t/164508e86f7318a6462a97034e0b321b.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffccff;
   --foreground: #000000;
@@ -47,4 +68,9 @@ body {
 @keyframes marquee {
   0% { transform: translate(0, 0); }
   100% { transform: translate(-100%, 0); }
+}
+
+/* Custom class for Comic Sans fallback */
+.comic-sans {
+  font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', cursive !important;
 }

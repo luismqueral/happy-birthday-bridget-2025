@@ -133,7 +133,7 @@ export default function Home() {
     <div className={`min-h-screen bg-gray-200 text-black ${isPlaying ? 'gif-background' : ''}`}>
       {/* Construction Banner */}
       <div className={`${isPlaying ? 'bg-yellow-300' : 'bg-white'} text-center py-1 border-y-2 border-black marquee`}>
-        <span style={{ fontFamily: isPlaying ? "Comic Sans MS, cursive" : "Arial, sans-serif" }}>
+        <span className={isPlaying ? 'comic-sans' : ''}>
           ★★★ HAPPYBIRTHDAYBRIDGET.BIZ -- THE OFFICIAL WEBSITE FOR BRIDGET&apos;S BIRTHDAY ★★★
         </span>
       </div>
@@ -160,8 +160,7 @@ export default function Home() {
                 />
               )}
               <h1 
-                className={`${isPlaying ? 'text-6xl md:text-8xl' : 'text-5xl md:text-6xl'} font-bold text-white`}
-                style={{ fontFamily: isPlaying ? "Comic Sans MS, cursive" : "Arial, sans-serif" }}
+                className={`${isPlaying ? 'text-6xl md:text-8xl' : 'text-5xl md:text-6xl'} font-bold text-white ${isPlaying ? 'comic-sans' : ''}`}
               >
                 {isPlaying ? "HAPPY BIRTHDAY BRIDGET!" : "Happy Birthday Bridget"}
               </h1>
@@ -178,7 +177,7 @@ export default function Home() {
             
             {/* Audio Player */}
             <div className="bg-white/80 rounded-lg p-4 w-full max-w-md mt-4">
-              <p className="text-xl font-bold mb-2" style={{ fontFamily: "Comic Sans MS, cursive" }}>
+              <p className={`text-xl font-bold mb-2 ${isPlaying ? 'comic-sans' : ''}`}>
                 press play to initiate bridget&apos;s birthday
               </p>
               <audio 
@@ -547,8 +546,7 @@ export default function Home() {
           {/* Message in Comic Sans */}
           <div className={`text-center my-10 p-6 ${isPlaying ? 'bg-white/70' : 'bg-white'} rounded-lg shadow-lg max-w-2xl`}>
             <h2 
-              className={`text-4xl font-bold ${isPlaying ? 'text-fuchsia-600' : 'text-gray-600'}`}
-              style={{ fontFamily: "Comic Sans MS, cursive" }}
+              className={`text-4xl font-bold ${isPlaying ? 'text-fuchsia-600 comic-sans' : 'text-gray-600'}`}
             >
               happy birthday bridget, everyone loves you!!!
             </h2>
