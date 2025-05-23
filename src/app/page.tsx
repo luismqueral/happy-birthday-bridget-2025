@@ -542,7 +542,7 @@ export default function Home() {
           
           {/* Display IMG_6243.jpg as the last image */}
           <div className={`p-2 ${isPlaying ? borderColors[1] + ' border-8' : 'bg-white border-2 border-gray-300'} shadow-lg bg-white/70`}>
-            <Image 
+            <Image
               src="/images/IMG_6243.jpg" 
               alt="Bridget Photo" 
               width={600}
