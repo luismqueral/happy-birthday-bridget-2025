@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Happy Birthday Bridget 2025 - Geocities Style
+
+A nostalgic, Geocities-inspired birthday website created with love for Bridget's birthday in 2025.
+
+## Overview
+
+This is a single-page website built with Next.js and Tailwind CSS that features:
+- A retro early 2000s Geocities-style design
+- Blinking text, marquee animations, and other nostalgic web elements
+- Placeholder spots for images, videos, and GIFs
+- Classic web design elements like hit counters, guestbooks, and "under construction" banners
 
 ## Getting Started
 
-First, run the development server:
+### Development
+
+To run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) in your browser to see the website.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To create a production build:
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Customizing the Website
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Adding Images and GIFs
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Place your images in the `public/images` folder
+2. Place your GIFs in the `public/gifs` folder
+3. Open `src/app/page.tsx` and replace the placeholder elements with actual images/GIFs:
 
-## Deploy on Vercel
+```jsx
+{/* Replace placeholder with actual image */}
+<Image 
+  src="/gifs/dancing-baby.gif" 
+  alt="Dancing Baby" 
+  width={96} 
+  height={96} 
+  className="rounded" 
+/>
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Adding Videos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Place your videos in the `public/videos` folder
+2. Open `src/app/page.tsx` and add your videos where needed:
+
+```jsx
+<video 
+  controls 
+  className="w-full h-full"
+>
+  <source src="/videos/your-video.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+```
+
+### Adding Background Music
+
+To add authentic MIDI background music:
+
+1. Place your MIDI or MP3 file in the `public` folder
+2. Update the audio element in `src/app/page.tsx`
+
+## Inspiration
+
+This website is designed to look like an authentic Geocities website from the late 1990s/early 2000s, complete with:
+
+- Bold, bright colors
+- Times New Roman, Arial and Comic Sans fonts
+- Animated elements (blinking text, marquees)
+- "Under Construction" banners
+- Hit counters
+- Guestbook links
+- Email me buttons
+- "Best viewed in Netscape" messages
+
+## License
+
+This project is created with love for personal use.
+
+---
+
+Made with ❤️ for Bridget
